@@ -1,37 +1,3 @@
-# PhotoStack -- An iOS class to create a stack of photos, inspired by the eBay App
-
-![Photo Stack](http://clickflickboom.com/wp-content/uploads/2012/08/screenshot.jpg)
-
-I've always liked the way the eBay app for iPad handles multiple photos for a listing. For those that haven't seen it, the way it works is that all photos are stacked on top of one another, and the user flicks through the pile.
-
-PhotoStack is my attempt to re-create this user interface. 
-
-* iOS 5+
-* ARC Enabled
-
-## Demo
-
-I've uploaded a [YouTube video demonstrating the provided demo project here. ](http://www.youtube.com/watch?v=wmpg6nIV3ns).
-
-## Installation
-
-First, download the source (including example Xcode project), then include PhotoStackView.h, PhotoStackView.m and PhotoBorder.png files into your project. Include PhotoStackView.h and you're ready to go!
-
-To create a PhotoStack object, first initialise it as you would with a normal view:
-
-``` 
-PhotoStackView *photoStack = [[PhotoStackView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
-```
-
-
-## Set Up DataSource
-
-To populate with photos, you'll need to set the controller class as a PhotoStackViewDataSource.
-
-``` 
-photoStack.dataSource = self;
-```
-
 The PhotoStackViewDataSource protocol requires two methods to be implemented. These are modelled off Apple's TableView convention so they should be familiar to most developers.
 
 ``` 
