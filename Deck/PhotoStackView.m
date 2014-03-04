@@ -161,14 +161,7 @@ static CGFloat const PhotoRotationOffsetDefault = 2.0f;
                      completion:^(BOOL finished){
                          [photo removeFromSuperview];
 
-                         //[self makeCrooked:photo animated:YES];
-                         //[self sendSubviewToBack:photo];
                          [self makeStraight:[self topPhoto] animated:YES];
-
-                         //[self returnToCenter:photo];
-                         
-                         // TODO: Remove photo. Right now, it just flicks away, but stays in the array of photos.
-                         
                          
                          if ([self.delegate respondsToSelector:@selector(photoStackView:didRevealPhotoAtIndex:)]) {
                              [self.delegate photoStackView:self didRevealPhotoAtIndex:[self indexOfTopPhoto]];

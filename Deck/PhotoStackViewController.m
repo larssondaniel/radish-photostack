@@ -71,14 +71,12 @@
 #pragma mark -
 #pragma mark Deck Delegate Protocol Methods
 
--(void)photoStackView:(PhotoStackView *)photoStackView willStartMovingPhotoAtIndex:(NSUInteger)index
-{
+-(void)photoStackView:(PhotoStackView *)photoStackView willStartMovingPhotoAtIndex:(NSUInteger)index {
     // User started moving a photo
 }
 
 -(void)photoStackView:(PhotoStackView *)photoStackView willFlickAwayPhotoAtIndex:(NSUInteger)index {
     // User flicked the photo away, revealing the next one in the stack
-    //[self insertPhoto];
 }
 
 -(void)photoStackView:(PhotoStackView *)photoStackView didRevealPhotoAtIndex:(NSUInteger)index {
@@ -91,10 +89,10 @@
 }
 
 
-
 #pragma mark -
 #pragma mark Actions
 
+// Not quite working as supposed
 - (void)insertPhoto {
     NSMutableArray *photosMutable = [self.photos mutableCopy];
     [photosMutable addObject:[UIImage imageNamed:@"photo1.jpg"]];
@@ -109,15 +107,6 @@
 
 -(void)setup {
     [self.view addSubview:self.photoStack];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
 }
 
 - (void)viewDidLoad {
